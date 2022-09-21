@@ -1,0 +1,31 @@
+* {
+    @apply m-0 p-0 text-white box-border
+}
+
+body {
+    @apply flex flex-col items-center m-0 overflow-hidden justify-center 
+}
+
+.container {
+    @apply flex w-[90vw] sm:w-[100vw]
+}
+
+.panel {
+    @apply items-center bg-center object-cover h-[80vh] cursor-pointer relative flex-[0.5] transition-all ease-in duration-300 rounded-3xl justify-center text-center m-2 
+}
+
+h3 {
+    @apply bg-transparent text-2xl absolute bottom-5 left-5 opacity-0
+}
+
+.panel.active {
+    @apply flex-[5]
+}
+
+.panel.active h3 {
+    @apply opacity-100
+}
+
+.panel:nth-of-type(4),.panel:nth-of-type(5) {
+    @apply hidden md:block 
+}

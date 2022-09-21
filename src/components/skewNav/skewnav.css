@@ -1,0 +1,87 @@
+* {
+    @apply box-border
+}
+
+body {
+    @apply m-0 overflow-x-hidden bg-slate-800 text-white w-screen h-screen
+}
+
+.container {
+    @apply bg-white text-slate-800 origin-top-left transition-transform duration-500 w-screen min-h-screen p-12 relative
+}
+
+::-webkit-scrollbar {
+    @apply hidden
+}
+
+.container.show-nav {
+    @apply rotate-[-20deg]
+}
+
+.circle-container {
+    @apply fixed left-[-100px] top-[-100px]
+}
+
+.circle {
+    @apply h-[200px] w-[200px] bg-pink-500 rounded-full relative transition-transform duration-500
+}
+
+.circle button {
+    @apply absolute bg-transparent top-1/2 left-1/2 h-[100px] text-3xl text-white border-none
+}
+
+.circle button:focus {
+    @apply outline-none
+}
+
+.circle button#open {
+    @apply left-[60%]
+}
+
+.circle button#close {
+    @apply top-[60%] rotate-90 origin-top-left
+}
+
+.container.show-nav .circle {
+    @apply rotate-[-72deg]
+}
+
+.content img {
+    @apply max-w-[50%] rounded-lg my-4
+}
+
+.content {
+    @apply max-w-[1000px] my-[50px] mx-auto 
+}
+
+small {
+    @apply mb-6
+}
+
+nav {
+    @apply fixed bottom-10 left-0 z-[-100]
+}
+
+nav ul {
+    @apply list-none pl-[30px]
+}
+
+nav ul li {
+    @apply uppercase my-10 -translate-x-full transition-transform ease-in duration-500
+}
+
+nav ul li i{
+    @apply mx-4
+}
+
+nav ul li + li {
+    @apply ml-6 -translate-x-[150%]
+}
+
+nav ul li + li + li {
+    @apply ml-12 -translate-x-[200%]
+}
+
+.container.show-nav + nav li {
+    @apply translate-x-0 delay-100
+}
