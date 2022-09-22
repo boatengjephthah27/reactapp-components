@@ -1,17 +1,20 @@
 import React from 'react';
 import './cardsexpand.css';
-// import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const CardsExpand = () => {
 
-    const panels = document.querySelectorAll('panel')
+    const [classselect, expand] = useState('panel')
 
-    panels.forEach((panel) => {
-    panel.addEventListener('click', () => {
-        removeActiveClasses()
-        panel.classList.add('active')
+    const panels = document.querySelectorAll(classselect)
+
+    expand(
+        panels.forEach((panel) => {
+            panel.addEventListener('click', () => {
+            removeActiveClasses()
+            panel.classList.add('active')
     })
-    });
+    }));
   
     const removeActiveClasses = () => {
     panels.forEach(panel => {
@@ -21,23 +24,23 @@ const CardsExpand = () => {
 
     return (
         <div className='container'>
-            <div className='panel active bg-b'>
+            <div className={classselect}>
                 <h3>Explore the world </h3>
             </div>
 
-            <div className='panel  bg-a'>
+            <div className={classselect}>
                 <h3>Explore the world </h3>
             </div>
 
-            <div className='panel bg-c'>
+            <div className={classselect}>
                 <h3>Explore the world </h3>
             </div>
 
-            <div className='panel bg-d'>
+            <div className={classselect}>
                 <h3>Explore the world </h3>
             </div>
 
-            <div className='panel bg-e'>
+            <div className={classselect}>
                 <h3>Explore the world </h3>
             </div>
 
