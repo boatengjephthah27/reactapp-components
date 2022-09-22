@@ -21,11 +21,11 @@ const CardsExpand = () => {
 
     return (
         <div className='container'>
-            <div className='panel bg-b'>
+            <div className='panel active bg-b'>
                 <h3>Explore the world </h3>
             </div>
 
-            <div className='panel active bg-a'>
+            <div className='panel  bg-a'>
                 <h3>Explore the world </h3>
             </div>
 
