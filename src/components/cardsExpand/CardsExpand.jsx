@@ -8,6 +8,7 @@ const CardsExpand = () => {
 
     const panels = document.querySelectorAll(classselect)
 
+    
     expand(
         panels.forEach((panel) => {
             panel.addEventListener('click', () => {
